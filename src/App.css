@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+.table {
+  /* display: flex; */
+}
+
+.row {
+  /* background-color: blue; */
+  display: flex;
+}
+.cell {
+  border: solid #ccc 1px;
+  height: 30px;
+  width: 30px;
+}
+
+.snake {
+  background: green;
+}
