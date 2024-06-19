@@ -25,5 +25,11 @@ describe("use-snake-game hook tests", () => {
 
       expect(result.current.table).matchSnapshot();
     });
+
+    it("should create head of snake on center of table", () => {
+      const { result } = createHook({ height: 40, width: 40 });
+
+      expect(result.current.table[20][20]).toEqual(1);
+    });
   });
 });

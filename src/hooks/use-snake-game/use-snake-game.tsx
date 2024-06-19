@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createFilledMatrix } from "../../util/utils";
 import { useSnakeGameProps } from "./types";
-import { Position, Table } from "../common/types";
+import { Table } from "../common/types";
 import useSnake from "./use-snake/use-snake";
 
 function useSnakeGame({ height, width }: useSnakeGameProps) {
@@ -11,7 +11,7 @@ function useSnakeGame({ height, width }: useSnakeGameProps) {
     x: Math.floor(height / 2),
     y: Math.floor(width / 2),
   };
-  const { snake } = useSnake({
+  const { snake, growSnake, size } = useSnake({
     initialPosition: initialHeadPosition,
   });
 
@@ -27,6 +27,8 @@ function useSnakeGame({ height, width }: useSnakeGameProps) {
       })
     ),
     snake,
+    growSnake,
+    size,
   };
 }
 

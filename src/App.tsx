@@ -2,10 +2,15 @@ import "./App.css";
 import useSnakeGame from "./hooks/use-snake-game";
 
 function App() {
-  const { snake, table } = useSnakeGame({ height: 20, width: 20 });
+  const { snake, table, size, growSnake } = useSnakeGame({
+    height: 30,
+    width: 30,
+  });
 
   return (
     <>
+      {size}
+      <button onClick={() => growSnake()}>Grow</button>
       <div className="table">
         {table.map((row) => {
           return (
